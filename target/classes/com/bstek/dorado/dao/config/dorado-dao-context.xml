@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	">
+	<bean id="dao.unByteCodeProxyInterceptor"
+		class="com.bstek.dorado.dao.hibernate.UnByteCodeProxyInterceptor"></bean>
+	<bean id="dao.dirtyTreeSavePolicy" class="com.bstek.dorado.dao.hibernate.policy.impl.DirtyTreeSavePolicy">
+		<property name="savePolicy" ref="dao.smartSavePolicy"></property>
+	</bean>
+	<bean id="dao.smartSavePolicy" class="com.bstek.dorado.dao.hibernate.policy.impl.SmartSavePolicy"></bean>
+	<bean id="dao.daoSupport" class="com.bstek.dorado.dao.hibernate.DaoSupport"></bean>
+	<bean id="dao.SQLCriteriaPolicy" class="com.bstek.dorado.dao.hibernate.policy.impl.SQLCriteriaPolicy"></bean>
+	<bean id="dao.HQLCriteriaPolicy" class="com.bstek.dorado.dao.hibernate.policy.impl.HQLCriteriaPolicy"></bean>
+	<bean id="dao.QBCCriteriaPolicy" class="com.bstek.dorado.dao.hibernate.policy.impl.QBCCriteriaPolicy"></bean>
+	<bean id="dao.packagesToScanRegister" class="com.bstek.dorado.dao.hibernate.PackagesToScanRegister" abstract="true"/>
+	<bean id="dao.mappingResourcesRegister" class="com.bstek.dorado.dao.hibernate.MappingResourcesRegister" abstract="true"/>
+	
+	
+</beans>

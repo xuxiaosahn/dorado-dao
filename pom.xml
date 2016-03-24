@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bstek.dorado</groupId>
+  <artifactId>dorado-dao-hibernate3</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<artifactId>dorado-core</artifactId>
+  		<groupId>com.bstek.dorado</groupId>
+  		<version>7.5.0-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+			<artifactId>spring-orm</artifactId>
+			<groupId>org.springframework</groupId>
+			<version>3.2.5.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.0.Final</version>
+			<scope>compile</scope>
+	</dependency>
+	<!-- <dependency>
+	  	<groupId>org.hibernate</groupId>
+	  	<artifactId>hibernate-core</artifactId>
+	 	<version>4.3.0.Final</version>
+	 	<scope>compile</scope>
+	</dependency> -->
+  </dependencies>
+  <repositories>
+		<repository>
+			<id>bsdn-maven-repository</id>
+			<url>http://nexus.bsdn.org/content/groups/public/</url>
+		</repository>
+  </repositories>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+				<encoding>${project.build.sourceEncoding}</encoding>
+			</configuration>
+		</plugin>
+	</plugins>
+	</build> 
+</project>
